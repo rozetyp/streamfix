@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamFix</title>
+<meta name="description" content="Open-source Python library and self-hosted proxy that turns LLM output into valid JSON, including while it streams.">
+<meta property="og:title" content="StreamFix">
+<meta property="og:description" content="Valid JSON out of LLM output, even mid-stream. Open-source library, CLI and self-hosted proxy.">
+<meta property="og:url" content="https://streamfix.dev/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232563C9'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3E%7B%7D%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  --paper: #F7F9FC; --ink: #1C2330; --soft: #4A5466; --pencil: #2563C9;
+  --struck: #6B7385; --rule: #DCE2EB; --code-bg: #EEF2F8;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #161B22; --ink: #E6EAF0; --soft: #A7B0BE; --pencil: #8DB4FF;
+          --struck: #8C95A5; --rule: #2C3440; --code-bg: #1E242D; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.125rem/1.6 var(--serif); }
+main { max-width: 68ch; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.name { font-weight: 600; font-size: 1.25rem; }
+a { color: var(--pencil); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--pencil); outline-offset: 3px; border-radius: 2px; }
+h1 { font-weight: 400; font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.12;
+  letter-spacing: -0.01em; margin: 2.5rem 0 1rem; max-width: 22ch; }
+.lede { color: var(--soft); margin: 0 0 2.5rem; max-width: 58ch; }
+h2 { font-weight: 600; font-size: 1.3rem; margin: 3rem 0 0.75rem; }
+p { margin: 0 0 1rem; }
+code, pre { font-family: var(--mono); font-size: 0.85rem; }
+:not(pre) > code { background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; }
+pre { background: var(--code-bg); padding: 1rem 1.1rem; border-radius: 6px; overflow-x: auto;
+  line-height: 1.55; margin: 0 0 1.25rem; }
+
+/* The hero: the model's output, marked up by the editor, and what you get back. */
+.edit { display: grid; grid-template-columns: 1.25fr 1fr; gap: 1.5rem;
+  margin: 0 -2.5rem 1rem; }
+.edit figure { margin: 0; min-width: 0; display: flex; flex-direction: column; }
+.edit figcaption { font-size: 0.95rem; color: var(--soft); margin-bottom: 0.4rem; }
+.edit pre { margin: 0; flex: 1; }
+.raw { background: transparent; border: 1px solid var(--rule); }
+del { color: var(--struck); text-decoration: none;
+  background: linear-gradient(var(--pencil), var(--pencil)) no-repeat 0 55% / 100% 2px; }
+ins { color: var(--pencil); text-decoration: none; font-weight: 700; }
+.note { font-size: 0.95rem; color: var(--soft); }
+@media (prefers-reduced-motion: no-preference) {
+  del { animation: strike 0.5s ease-out both; animation-delay: calc(0.35s + var(--i, 0) * 0.12s); }
+  ins { animation: write 0.3s ease-out both; animation-delay: calc(0.55s + var(--i, 0) * 0.12s); }
+  @keyframes strike { from { background-size: 0 2px; } }
+  @keyframes write { from { opacity: 0; } }
+}
+@media (max-width: 820px) {
+  .edit { grid-template-columns: 1fr; margin: 0 0 1rem; }
+}
+
+table { width: 100%; border-collapse: collapse; font-size: 1rem; margin: 0 0 1rem; }
+th, td { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--rule);
+  vertical-align: top; }
+th { font-weight: 600; }
+td.n, th.n { text-align: right; padding-right: 0; padding-left: 0.75rem; white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+li { margin-bottom: 0.4rem; }
+footer { margin-top: 3.5rem; padding-top: 1rem; border-top: 1px solid var(--rule);
+  color: var(--soft); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <span class="name">StreamFix</span>
+  <a href="https://github.com/rozetyp/streamfix">Source on GitHub</a>
+</header>
+
+<h1>Valid JSON out of LLM output, even mid&#8209;stream.</h1>
+<p class="lede">Models wrap JSON in fences, think out loud, write Python literals and get cut off.
+StreamFix edits that back into the JSON the model meant: on complete responses, on tool-call
+arguments, and live on a token stream.</p>
+
+<div class="edit">
+  <figure>
+    <figcaption>What the model sent, with StreamFix's edits</figcaption>
+<pre class="raw"><del style="--i:0">&lt;think&gt;User wants {"name": …}&lt;/think&gt;</del>
+<del style="--i:1">```json</del>
+{<ins style="--i:2">"</ins>name<ins style="--i:2">"</ins>: <del style="--i:3">'</del><ins style="--i:3">"</ins>Alice<del style="--i:3">'</del><ins style="--i:3">"</ins>, <ins style="--i:4">"</ins>age<ins style="--i:4">"</ins>: 30,
+ <ins style="--i:5">"</ins>active<ins style="--i:5">"</ins>: <del style="--i:6">True</del><ins style="--i:6">true</ins>, <ins style="--i:7">"</ins>tags<ins style="--i:7">"</ins>: [<del style="--i:8">'</del><ins style="--i:8">"</ins>a<del style="--i:8">'</del><ins style="--i:8">"</ins><del style="--i:9">,</del>]<del style="--i:9">,</del>}
+<del style="--i:10">```</del></pre>
+  </figure>
+  <figure>
+    <figcaption>What you get</figcaption>
+<pre>{
+  "name": "Alice",
+  "age": 30,
+  "active": true,
+  "tags": ["a"]
+}</pre>
+  </figure>
+</div>
+<p class="note">Syntax repair is done by <a href="https://github.com/mangiucugna/json_repair">json-repair</a>.
+StreamFix adds what surrounds it: reasoning- and fence-aware extraction, completing a cut-off
+<code>tru</code> or <code>"key":</code>, a streaming repairer, schema checks, and a proxy.</p>
+
+<h2>Use it as a library</h2>
+<pre>pip install "streamfix @ git+https://github.com/rozetyp/streamfix"
+
+from streamfix import repair
+result = repair(model_output)
+result.value     # the parsed JSON, or None
+result.repairs   # what was fixed, e.g. ["fence_strip"]</pre>
+<p>For streams, feed each delta to <code>StreamProcessor</code> and send on what it returns.
+Commas and bare words are held only until the next token settles them, and a stream that
+stops early is closed into valid JSON.</p>
+
+<h2>Or run the proxy</h2>
+<pre>pip install "streamfix[server] @ git+https://github.com/rozetyp/streamfix"
+STREAMFIX_UPSTREAM_URL=https://openrouter.ai/api/v1 streamfix serve
+
+client = OpenAI(base_url="http://localhost:8000/v1", api_key=YOUR_KEY)
+client.chat.completions.create(model=..., messages=...,
+    extra_body={"schema": SCHEMA})   # optional contract mode</pre>
+<p>It proxies chat completions, so existing OpenAI client code keeps working with a new
+<code>base_url</code>. Your key passes through to the upstream, and nothing is stored.</p>
+<p>The public instance at <code>https://streamfix.dev/v1</code> forwards to OpenRouter and has
+no key of its own, so send your OpenRouter key. If you'd rather not route requests through a
+third party, run your own copy; it's one command.</p>
+
+<h2>Measured</h2>
+<table>
+  <thead><tr><th></th><th class="n">json-repair</th><th class="n">StreamFix</th></tr></thead>
+  <tbody>
+    <tr><td>json-repair's own test suite</td><td class="n">213 / 213</td><td class="n">213 / 213</td></tr>
+    <tr><td>StreamFix's cases</td><td class="n">54 / 61</td><td class="n">61 / 61</td></tr>
+    <tr><td>Same cases, streamed one character at a time</td><td class="n">n/a</td><td class="n">60 / 60</td></tr>
+  </tbody>
+</table>
+<p class="note">StreamFix's cases were written knowing where json-repair falls short, so read
+the second row with that in mind. The numbers are recomputed by the test suite on every run.</p>
+
+<h2>Limits</h2>
+<ul>
+  <li>It recovers what the model meant to write, not what it never wrote. A cut-off answer
+  comes back valid but incomplete.</li>
+  <li>Picking the answer out of several JSON values is a heuristic: one separated by prose
+  is chosen, glued-together values follow json-repair's convention.</li>
+  <li>A stream can't take back a draft it already sent; the full repair at the end is the
+  authoritative answer.</li>
+  <li>Schema retries happen once, and only without streaming.</li>
+</ul>
+
+<footer>MIT licensed. <a href="https://github.com/rozetyp/streamfix">github.com/rozetyp/streamfix</a></footer>
+</main>
+</body>
+</html>

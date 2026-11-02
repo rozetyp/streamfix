@@ -1,0 +1,425 @@
+{
+ "origin": "Raw responses that failed json.loads, captured from 11 models via OpenRouter in StreamFix's Jan-Mar 2026 benchmarks (deduplicated; email addresses replaced with user@example.com).",
+ "cases": [
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main Street\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": "{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Smith\",\n  \"age\": 34,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Johnson\",\n  \"age\": 34,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zip\": \"10001\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 101,\n  \"name\": \"Alice Johnson\",\n  \"address\": {\n    \"street\": \"456 Oak Avenue\",\n    \"city\": \"Springfield\",\n    \"zip\": \"62701\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main Street\",\n    \"city\": \"New York\",\n    \"zip\": \"10001\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Laptop\",\n    \"price\": 999.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Headphones\",\n    \"price\": 199.50\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Smartphone\",\n    \"price\": 699.00\n  }\n]\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Smith\",\n  \"age\": 30,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alexandra Martinez\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Sophia Martinez\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 79.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Organic Cotton T-Shirt\",\n        \"price\": 29.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Organic Cotton T-Shirt\",\n        \"price\": 29.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"quote\": \"He said \\\"hello\\\"\",\n  \"newline\": \"line1\\nline2\",\n  \"unicode\": \"café\"\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Alex Johnson\",\n  \"address\": {\n    \"street\": \"123 Maple Avenue\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 59.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Organic Cotton T-Shirt\",\n        \"price\": 19.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/devstral-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/devstral-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/devstral-2512",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Laptop\",\n    \"price\": 999.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Smartphone\",\n    \"price\": 699.99\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Headphones\",\n    \"price\": 149.99\n  }\n]\n```"
+  },
+  {
+   "model": "mistralai/devstral-2512",
+   "kind": "content",
+   "raw": "```json\n{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alex Johnson\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Alex Johnson\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zip\": \"10001\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smartphone X\",\n        \"price\": 699.99\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Bluetooth Speaker\",\n        \"price\": 49.99\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smartphone\",\n        \"price\": 699.99\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Bluetooth Speaker\",\n        \"price\": 49.99\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smartphone\",\n        \"price\": 699.99\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Laptop\",\n        \"price\": 1299.99\n    }\n]\n```"
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Johnson\",\n  \"age\": 28,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"John Doe\",\n  \"age\": 28,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Product A\",\n        \"price\": 29.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Product B\",\n        \"price\": 49.99\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Product C\",\n        \"price\": 19.99\n    }\n]\n```"
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Johnson\",\n  \"age\": 29,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "openai/gpt-4o-mini",
+   "kind": "tool_args",
+   "raw": "{\"amount\": 150, \"currency\": \"USD\"}{\"amount\": 50, \"currency\": \"USD\"}{\"amount\": 100, \"currency\": \"USD\"}"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"John Doe\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "content",
+   "raw": "```\n{\n  \"name\": \"John Doe\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Product A\",\n    \"price\": 9.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Product B\",\n    \"price\": 19.99\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Product C\",\n    \"price\": 29.99\n  }\n]\n```"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 1,\n  \"name\": \"Jane Smith\",\n  \"address\": {\n    \"street\": \"123 Oak Street\",\n    \"city\": \"Springfield\",\n    \"zip\": \"62701\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Elena Rodriguez\",\n  \"age\": 34,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 1,\n  \"name\": \"Jane Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Laptop\",\n    \"price\": 999.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Smartphone\",\n    \"price\": 699.50\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Headphones\",\n    \"price\": 149.00\n  }\n]\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n[\n  { \"id\": 1, \"name\": \"Laptop\", \"price\": 999.99 },\n  { \"id\": 2, \"name\": \"Headphones\", \"price\": 199.50 },\n  { \"id\": 3, \"name\": \"Smartphone\", \"price\": 699.00 }\n]\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"62701\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alexandra Chen\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Jane Doe\",\n  \"address\": {\n    \"street\": \"123 Maple Avenue\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 89.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smart LED Desk Lamp\",\n        \"price\": 49.95\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Alex Johnson\",\n  \"address\": {\n    \"street\": \"123 Maple Avenue\",\n    \"city\": \"Springfield\",\n    \"zip\": \"94025\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smart Watch\",\n        \"price\": 199.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Bluetooth Speaker\",\n        \"price\": 79.99\n    }\n]\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "tool_args",
+   "raw": "{\""
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Emily Wilson\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON object with specific fields: name (string), age (number), and active (boolean). They want realistic values and only the JSON output with no explanation.\n\nI need to provide a valid JSON object like:\n{\n  \"name\": \"John Smith\",\n  \"age\": 32,\n  \"active\": true\n}\n\nOr similar realistic values. Let me pick something generic but realistic:\n- Name: Something like \"Sarah Johnson\" or \"Michael Chen\"\n- Age: Something between 18 and 65, like 28 or 45\n- Active: true or false (either is realistic)\n\nI'll go with:\n{\n  \"name\": \"Sarah Johnson\",\n  \"age\": 34,\n  \"active\": true\n}\n\nMake sure to return ONLY the JSON, no markdown code blocks or explanations unless necessary. The user said \"Return ONLY the JSON, no explanation\" so I should just output the raw JSON. </think> {\"name\": \"Sarah Johnson\", \"age\": 34, \"active\": true}"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON object representing a user profile with specific fields:\n- id (number)\n- name (string)\n- address (object with street, city, zip)\n\nThe user explicitly says \"Return ONLY the JSON\" which means I should not include any markdown formatting like ```json or ```, and no explanatory text before or after.\n\nI need to construct a valid JSON object with these fields. I'll use realistic placeholder values:\n- id: a number like 12345\n- name: a string like \"John Doe\"\n- address: an object containing:\n  - street: a string like \"123 Main St\"\n  - city: a string like \"Anytown\"\n  - zip: a string like \"12345\" (or could be number, but zip codes often have leading zeros so string is safer, though the user didn't specify type for zip)\n\nLet me construct it:\n\n```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```\n\nBut since the user said \"Return ONLY the JSON\", I should remove the markdown code blocks and just return the raw JSON string.\n\nSo the output should be:\n{\"id\":12345,\"name\":\"John Doe\",\"address\":{\"street\":\"123 Main St\",\"city\":\"Anytown\",\"zip\":\"12345\"}}\n\nOr with formatting (whitespace is fine in JSON):\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n\nBoth are valid JSON. The formatted version is more readable. I'll provide the formatted version but without the markdown code fences.\n\nWait, I need to be careful. The user said \"Return ONLY the JSON\". This typically means no markdown formatting, no backticks, just the raw JSON.\n\nSo I'll output:\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n\nActually, looking at the instruction again, they want ONLY the JSON. So I should not include any text before or after. Just the JSON object.\n\nLet me verify the structure:\n- id: number ✓\n- name: string ✓\n- address: object with street, city, zip ✓\n\nAll requirements met. </think> {\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON object representing a user profile with specific fields:\n- id (number)\n- name (string)\n- address (object with street, city, zip)\n\nThe user explicitly says \"Return ONLY the JSON\" which means I should not include any markdown formatting like ```json or ```, and no explanatory text before or after.\n\nI need to construct a valid JSON object with these fields. I'll use realistic placeholder values:\n- id: a number like 12345\n- name: a string like \"John Doe\"\n- address: an object containing:\n  - street: a string like \"123 Main St\"\n  - city: a string like \"Anytown\"\n  - zip: a string like \"12345\" (or could be number, but zip codes often have leading zeros or dashes, so string is safer, though the user didn't specify type for zip)\n\nLet me construct it:\n\n```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```\n\nBut since the user said \"Return ONLY the JSON\", I should remove the markdown code blocks and just return the raw JSON string.\n\nSo the output should be:\n{\"id\":12345,\"name\":\"John Doe\",\"address\":{\"street\":\"123 Main St\",\"city\":\"Anytown\",\"zip\":\"12345\"}}\n\nOr with formatting (whitespace is fine in JSON):\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n\nActually, looking at the instruction \"Return ONLY the JSON\", raw JSON without markdown fences is appropriate. I'll provide formatted JSON for readability but without the markdown code block delimiters.\n\nWait, I should check if the user wants it minified or formatted. Usually \"ONLY the JSON\" means just the JSON content, possibly formatted. I'll provide formatted JSON without markdown fences.\n\nStructure:\n- id: number (e.g., 1)\n- name: string (e.g., \"Alice Smith\")\n- address: object\n  - street: string (e.g., \"456 Oak Avenue\")\n  - city: string (e.g., \"Springfield\")\n  - zip: string (e.g., \"98765\") or number\n\nI'll use:\n{\n  \"id\": 1,\n  \"name\": \"Jane Doe\",\n  \"address\": {\n    \"street\": \"123 Maple Street\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n\nAnd I will not wrap it in ```json ... ```. </think> {\n  \"id\": 1,\n  \"name\": \"Jane Doe\",\n  \"address\": {\n    \"street\": \"123 Maple Street\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON array of 3 products. Each product should have:\n- id (number)\n- name (string)\n- price (number)\n\nThe user specifically asks to return ONLY the JSON array, so I should not include any markdown formatting like ```json or any explanatory text.\n\nI need to create a valid JSON array with 3 objects. Let me construct it:\n\n[\n  {\"id\": 1, \"name\": \"Product A\", \"price\": 10.99},\n  {\"id\": 2, \"name\": \"Product B\", \"price\": 24.50},\n  {\"id\": 3, \"name\": \"Product C\", \"price\": 5.00}\n]\n\nThis is valid JSON. I should output exactly this without any additional text or formatting. </think> [{\"id\":1,\"name\":\"Wireless Mouse\",\"price\":29.99},{\"id\":2,\"name\":\"Mechanical Keyboard\",\"price\":89.50},{\"id\":3,\"name\":\"USB-C Cable\",\"price\":12.99}]"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON array of 3 products. Each product should have:\n- id (number)\n- name (string)\n- price (number)\n\nThe user specifically asks to return ONLY the JSON array, so I should not include any markdown formatting like ```json or ```, and no explanatory text.\n\nI need to construct a valid JSON array with 3 objects. Let me create sample data:\n\n1. id: 1, name: \"Wireless Mouse\", price: 29.99\n2. id: 2, name: \"Mechanical Keyboard\", price: 89.99\n3. id: 3, name: \"USB-C Cable\", price: 12.99\n\nOr something similar. The values don't matter as long as they match the types requested.\n\nFormat:\n[\n  {\"id\": 1, \"name\": \"Product 1\", \"price\": 10.00},\n  {\"id\": 2, \"name\": \"Product 2\", \"price\": 20.00},\n  {\"id\": 3, \"name\": \"Product 3\", \"price\": 30.00}\n]\n\nSince the user said \"Return ONLY the JSON array\", I should output just the raw JSON without any code blocks or additional text. </think> [{\"id\":1,\"name\":\"Wireless Mouse\",\"price\":29.99},{\"id\":2,\"name\":\"Mechanical Keyboard\",\"price\":89.99},{\"id\":3,\"name\":\"USB-C Cable\",\"price\":12.99}]"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON object with three specific fields: name (string), age (number), and active (boolean). They want realistic values and ONLY the JSON, no explanation.\n\nI need to:\n1. Create a valid JSON object\n2. Include exactly these fields: name, age, active\n3. Use realistic values (e.g., a real name, reasonable age, true/false for active status)\n4. Return ONLY the JSON, no markdown code blocks, no explanation text\n\nExample:\n{\"name\": \"John Smith\", \"age\": 32, \"active\": true}\n\nThis is straightforward. I'll provide a realistic name, a reasonable adult age, and a boolean value. </think> {\"name\": \"Sarah Johnson\", \"age\": 34, \"active\": true}"
+  },
+  {
+   "model": "mistralai/mistral-small-creative",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Jane Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Sarah Chen\",\n  \"age\": 32,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON array of 3 products. Each product should have:\n- id (number)\n- name (string)\n- price (number)\n\nThe user specifically asks to return ONLY the JSON array, so I should not include any markdown formatting like ```json or ```, and no explanatory text.\n\nI need to construct a valid JSON array with 3 objects containing the specified fields.\n\nExample structure:\n[\n  {\"id\": 1, \"name\": \"Product A\", \"price\": 10.99},\n  {\"id\": 2, \"name\": \"Product B\", \"price\": 24.50},\n  {\"id\": 3, \"name\": \"Product C\", \"price\": 5.00}\n]\n\nI'll make sure it's valid JSON (double quotes for strings and property names, proper commas, etc.) and output only that. </think> [{\"id\":1,\"name\":\"Wireless Mouse\",\"price\":29.99},{\"id\":2,\"name\":\"Mechanical Keyboard\",\"price\":89.50},{\"id\":3,\"name\":\"USB-C Cable\",\"price\":12.99}]"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants me to return a JSON object with special characters. The example provided includes:\n1. A quote with escaped quotes: \"He said \\\"hello\\\"\"\n2. A newline character: \"line1\\nline2\"\n3. Unicode characters: \"café\"\n\nThe user specifically asks to return ONLY the JSON.\n\nI need to make sure the JSON is valid and properly formatted. The example given in the prompt shows the desired structure:\n- {\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n\nI should return exactly this JSON structure, ensuring proper escaping of the quotes and newline characters.\n\nLet me verify:\n- The quote field needs escaped quotes: \\\"hello\\\"\n- The newline field needs the actual newline character or the escape sequence \\n\n- The unicode field can contain the actual unicode character é\n\nSince the user provided the exact JSON they want, I should return it as is, making sure it's valid JSON.\n\nThe output should be:\n```json\n{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n```\n\nOr without the markdown code block since they said \"Return ONLY the JSON\", but usually JSON is clearer with code blocks. However, the instruction says \"Return ONLY the JSON\" which typically means just the raw JSON string without markdown formatting.\n\nLet me check the exact wording: \"Return ONLY the JSON.\"\n\nThis suggests I should output just the JSON string without any additional text or markdown code fences.\n\nSo the output should be:\n{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n\nWait, I need to be careful about the escaping. In the actual output:\n- The backslash before the quote needs to be present to escape the quote in the JSON string\n- The \\n should be either a literal newline or the escape sequence depending on how it's interpreted\n\nActually, looking at the user's request: they want the JSON with special characters. The example shows:\n- \\\"hello\\\" - which in the actual JSON output would be escaped quotes\n- \\n - which could be a literal newline or the two characters \\ and n\n\nIn proper JSON:\n- Quotes inside strings must be escaped with backslash: \\\"\n- Newlines inside strings must be escaped with \\n (or actual newlines in some parsers, but standard JSON requires \\n for control characters)\n\nSo the correct JSON output should be:\n{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n\nThis is valid JSON where:\n- \\\" represents a literal quote character in the string value\n- \\n represents a newline character in the string value\n- é is a valid Unicode character that doesn't need escaping\n\nYes, this looks correct. </think> {\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}"
+  },
+  {
+   "model": "moonshotai/kimi-k2.5",
+   "kind": "content",
+   "raw": " The user wants a JSON array of 3 products. Each product should have:\n- id (number)\n- name (string)\n- price (number)\n\nThe user specifically asks to return ONLY the JSON array, so I should not include any markdown formatting like ```json or any explanatory text.\n\nI need to create a valid JSON array with 3 objects. Let me construct it:\n\n[\n  {\"id\": 1, \"name\": \"Product A\", \"price\": 10.99},\n  {\"id\": 2, \"name\": \"Product B\", \"price\": 24.50},\n  {\"id\": 3, \"name\": \"Product C\", \"price\": 5.00}\n]\n\nOr something similar. I should make sure it's valid JSON - double quotes for strings and keys, numbers without quotes.\n\nSince the user said \"Return ONLY the JSON array\", I should output just the raw JSON without any code blocks or additional text. </think> [{\"id\":1,\"name\":\"Wireless Mouse\",\"price\":29.99},{\"id\":2,\"name\":\"Mechanical Keyboard\",\"price\":89.50},{\"id\":3,\"name\":\"USB-C Cable\",\"price\":12.99}]"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Alice Smith\",\n  \"age\": 28,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zip\": \"10001\"\n  }\n}\n```"
+  },
+  {
+   "model": "z-ai/glm-4.7-flash",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Laptop\",\n    \"price\": 999.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Smartphone\",\n    \"price\": 699.50\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Headphones\",\n    \"price\": 199.00\n  }\n]\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.1-8b-instruct",
+   "kind": "content",
+   "raw": "```\n{\n  \"id\": 1,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.1-8b-instruct",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Product 1\",\n    \"price\": 10.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Product 2\",\n    \"price\": 5.99\n  },\n  {\n    \"id\": 3,\n    \"name\": \"Product 3\",\n    \"price\": 7.99\n  }\n]\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.1-8b-instruct",
+   "kind": "content",
+   "raw": "```json\n[\n  {\n    \"id\": 1,\n   0\n  },\n  {\n    \"id\": 0,\n   0\n  },\n  {\n    \"id\":0,\n   0\n  }\n]\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.1-8b-instruct",
+   "kind": "content",
+   "raw": "```javascript\nconst products = [\n  { id: 1, name: \"Product 1\", price: 10.99 },\n  { id: 2, name: \"Product 2\", price: 5.99 },\n  { id: 3, name: \"Product 3\", price: 7.99 }\n];\n\nconsole.log(JSON.stringify(products));\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.1-8b-instruct",
+   "kind": "content",
+   "raw": "```python\nimport json\n\ndata = {\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\nline2\", \"unicode\": \"café\"}\n\nprint(json.dumps(data, ensure_ascii=False))\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n{\n  \"name\": \"Emma Rodriguez\",\n  \"age\": 28,\n  \"active\": true\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 123,\n  \"name\": \"John Doe\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"New York\",\n    \"zip\": \"10001\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n[\n    {\"id\": 1, \"name\": \"Laptop\", \"price\": 999.99},\n    {\"id\": 2, \"name\": \"Smartphone\", \"price\": 699.50},\n    {\"id\": 3, \"name\": \"Headphones\", \"price\": 149.99}\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Headphones\",\n        \"price\": 99.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smart Watch\",\n        \"price\": 199.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Bluetooth Speaker\",\n        \"price\": 79.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Laptop\",\n        \"price\": 999.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smartphone\",\n        \"price\": 699.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Headphones\",\n        \"price\": 149.99\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-3b",
+   "kind": "content",
+   "raw": "```json\n{\"quote\": \"He said \\\"hello\\\"\", \"newline\": \"line1\\\\nline2\", \"unicode\": \"café\"}\n```"
+  },
+  {
+   "model": "meta-llama/llama-3-8b-instruct",
+   "kind": "content",
+   "raw": "```javascript\nconst products = [\n  { id: 1, name: 'Product 1', price: 10.99 },\n  { id: 2, name: 'Product 2', price: 5.99 },\n  { id: 3, name: 'Product 3', price: 7.99 }\n];\n\nconsole.log(JSON.stringify(products));\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Alex Johnson\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"12345\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n{\n  \"id\": 12345,\n  \"name\": \"Alex Johnson\",\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Springfield\",\n    \"zip\": \"94025\"\n  }\n}\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 89.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Smart LED Desk Lamp\",\n        \"price\": 49.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 89.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Smart LED Desk Lamp\",\n        \"price\": 49.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.95\n    }\n]\n```"
+  },
+  {
+   "model": "mistralai/ministral-8b-2512",
+   "kind": "content",
+   "raw": "```json\n[\n    {\n        \"id\": 1,\n        \"name\": \"Wireless Bluetooth Headphones\",\n        \"price\": 89.99\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Stainless Steel Water Bottle\",\n        \"price\": 24.50\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Smart LED Desk Lamp\",\n        \"price\": 49.99\n    }\n]\n```"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "tool_args",
+   "raw": "{\"customer\": {\"email\": \"user@example.com\", \"name\": \"Jane Smith\", \"phone\": \"+1-555-0123\"}, \"items\": [{\"product_id\": \"SKU-789\", \"quantity\": 3, \"unit_price\": 29.99}, {\"product_id\": \"SKU-456\", \"quantity\": 1, \"unit_price\": 149.99}], \"shipping_address\": {\"street\": \"42 Oak Street”, “city”: “Austin”, “postal_code”: “78701”, “country_code”: “US”}, \"\t\n\t\n\t\n\t\n\t\t}}]"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "tool_args",
+   "raw": "{\"customer\": {\"email\": \"user@example.com\", \"name\": \"Jane Smith\", \"phone\": \"+1-555-0123\"}, \"items\": [{\"product_id\": \"SKU-789\", \"quantity\": 3, \"unit_price\": 29.99}, {\"product_id\": \"SKU-456\", \"quantity\": 1, \"unit_price\": 149.99}], \"shipping_address\": {\"street\": \"42 Oak Street”, “city”: ”Austin”, “postal_code”: ”78701”, “country_code”: ”US”}, \"\t\n\t\n\t\n\t\n\t\t}}]"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "tool_args",
+   "raw": "{\"customer\": {\"email\": \"user@example.com\", \"name\": \"Jane Smith\", \"phone\": \"+1-555-0123\"}, \"items\": [{\"product_id\": \"SKU-789\", \"quantity\": 3, \"unit_price\": 29.99}, {\"product_id\": \"SKU-456\", \"quantity\": 1, \"unit_price\": 149.99}], \"shipping_address\": {\"street\": \"42 Oak Street, Austin TX 78701, US), \\\"city\\\": \\\"Austin\\\", \\\"country_code\\\": \\\"US\\\", \\\"postal_code\\\": \\\"78701\\\"}, \"\t\n\t\n\t\n\t\n\t\t}}]"
+  },
+  {
+   "model": "meta-llama/llama-3.3-70b-instruct",
+   "kind": "tool_args",
+   "raw": "{\"customer\": {\"email\": \"user@example.com\", \"name\": \"Jane Smith\", \"phone\": \"+1-555-0123\"}, \"items\": [{\"product_id\": \"SKU-789\", \"quantity\": 3, \"unit_price\": 29.99}, {\"product_id\": \"SKU-456\", \"quantity\": 1, \"unit_price\": 149.99}], \"notes\": \"gift wrap requested\", \"priority\": \"express\", \"shipping_address\": {\"street\": \"42 Oak Street”, “city”: “Austin”, “postal_code”: “78701”, “country_code”: “US”}}"
+  },
+  {
+   "model": "deepseek/deepseek-r1",
+   "kind": "tool_args",
+   "raw": "{    \"customer\": {        \"name\": \"Jane Smith\",        \"email\": \"user@example.com\",        \"phone\": \"+1-555-0123\"    },    \"items\": [        {            \"product_id\": \"SKU-789\",            \"quantity\": 3,            \"unit_price\": 29.99        },        {            \"product_id\": \"SKU-456\",            \"quantity\": 1,            \"unit_price\": 149.99        }    ],    \"shipping_address\": {        \"street\": \"42 Oak Street\",        \"city\": \"Austin\",        \"postal_code\": \"78701\",        \"country_code\""
+  }
+ ]
+}
